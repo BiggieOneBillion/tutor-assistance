@@ -1,20 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "./Header";
+import WebSections from "../../WebSections";
 
 const SectionCss = () => {
   return (
-    <div className="h-full w-full py-10 px-8 space-y-10">
+    <WebSections>
       {/* title */}
-      <div className="space-y-4">
-        <div className="flex items-center gap-1 text-xs">
-          <Link to={"/dashboard"}>Home</Link> |
-          <Link to={"/dashboard/web-development"}>Web Development</Link> |
-          <Link to={"/dashboard/web-development/css-section"}>Css</Link>
-        </div>
-        <h1 className="font-semibold text-2xl">CSS LESSONS</h1>
-      </div>
+      <Header navTitle={'Css'} navUrl={'css-section'} title={'CSS LESSONS'}/>
       <h1 className="font-medium text-lg text-black">COMING SOON!!</h1>
-    </div>
+    </WebSections>
   );
 };
 

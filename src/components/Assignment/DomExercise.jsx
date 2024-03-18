@@ -1,9 +1,10 @@
 import React from "react";
 import Header from "./Header";
+import WebSections from "../WebSections";
 
 const DomExercise = () => {
   return (
-    <div className="h-full w-full overflow-y-scroll py-10 px-8 space-y-10">
+    <WebSections>
       {/* title */}
       <Header
         navTitle={"DOM Exercise"}
@@ -11,7 +12,7 @@ const DomExercise = () => {
         title={"DOM Exercise"}
       />
       {/* <LessonAccordian data={data} /> */}
-    </div>
+    </WebSections>
   );
 };
 

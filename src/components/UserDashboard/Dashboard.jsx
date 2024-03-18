@@ -21,7 +21,7 @@ const Dashboard = () => {
           <Link
             to={"/dashboard"}
             className={`${
-              location.pathname === "/dashboard"
+              !(location.pathname.startsWith("/dashboard/assignment"))
                 ? "bg-black text-white"
                 : "bg-transparent text-black"
             } py-3 text-center text-lg hover:scale-[0.98] transition-transform ease-in-out duration-300 active:scale-95 px-2 w-full rounded-md border font-medium`}
@@ -31,7 +31,7 @@ const Dashboard = () => {
           <Link
             to={"/dashboard/assignment"}
             className={`${
-              location.pathname === "/dashboard/assignment"
+              location.pathname.startsWith("/dashboard/assignment")
                 ? "bg-black text-white"
                 : "bg-transparent text-black"
             } py-3 text-center text-lg hover:scale-[0.98] transition-transform ease-in-out duration-300 active:scale-95 px-2 w-full rounded-md border font-medium`}
@@ -48,10 +48,10 @@ const Dashboard = () => {
             <MobilePopMenu />
           </div>
           {/* desktop nav items */}
-          <p className="font-medium text-base capitalized text-wrap hidden lg:block">
+          <p className="font-medium text-base capitalized text-wrap">
             Welcome Back
           </p>
-          <p className="font-medium text-sm capitalized text-wrap w-[100px]">
+          <p className="font-medium hidden text-sm capitalized text-wrap w-[100px]">
             Raymond Trust
           </p>
         </nav>

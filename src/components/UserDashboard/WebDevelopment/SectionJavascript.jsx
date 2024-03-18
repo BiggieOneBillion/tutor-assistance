@@ -1,24 +1,20 @@
 import React from "react";
 import LessonAccordian from "../../LessonAccordian";
-import { Link } from "react-router-dom";
 import { jsCourse as data } from "../../../data/Courses";
+import Header from "./Header";
+import WebSections from "../../WebSections";
 
 const SectionJavascript = () => {
   return (
-    <div className="h-full w-full overflow-y-scroll py-10 px-8 space-y-10">
+    <WebSections>
       {/* title */}
-      <div className="space-y-2">
-        <div className="flex items-center gap-1 text-xs italicy">
-          <Link to={"/dashboard"}>Home</Link> |
-          <Link to={"/dashboard/web-development"}>Web Development</Link> |
-          <Link to={"/dashboard/web-development/javascript-section"}>
-            Javascript
-          </Link>
-        </div>
-        <h1 className="font-semibold text-2xl">JavaScript Lessons</h1>
-      </div>
+      <Header
+        navTitle={"Javascript"}
+        navUrl={"javascript-section"}
+        title={"JavaScript Lessons"}
+      />
       <LessonAccordian data={data} />
-    </div>
+    </WebSections>
   );
 };
 

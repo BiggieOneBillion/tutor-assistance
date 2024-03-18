@@ -6,11 +6,11 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 const LessonDialog = ({ data }) => (
   <Dialog.Root>
     <Dialog.Trigger asChild>
-      <div className="flex gap-1 items-center">
+      <div className="flex gap-1 items-center border w-fit px-1 border-black">
         <span>
           <IoIosArrowRoundForward />
         </span>
-        <span className="text-xs capitalize underline active:scale-95 transition-transform ease-in-out duration-300 cursor-pointer">
+        <span className="text-xs capitalize underliney active:scale-95 transition-transform ease-in-out duration-300 cursor-pointer">
           Link to video
         </span>
       </div>

@@ -1,11 +1,17 @@
 import * as Popover from "@radix-ui/react-popover";
+import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const MobilePopMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closePopover = () => {
+    setIsOpen(false);
+  };
   return (
-    <Popover.Root>
+    <Popover.Root open={isOpen} onOpenChange={setIsOpen}>
       <Popover.Trigger asChild>
         <span className="text-black text-3xl">
           <GiHamburgerMenu />
@@ -17,12 +23,12 @@ const MobilePopMenu = () => {
           className="rounded p-5 w-[260px] bg-white border focus:shadow-[0_10px_38px_-10px_hsla(206,22%,7%,.35),0_10px_20px_-15px_hsla(206,22%,7%,.2),0_0_0_2px_theme(colors.violet7)] will-change-[transform,opacity] data-[state=open]:data-[side=top]:animate-slideDownAndFade data-[state=open]:data-[side=right]:animate-slideLeftAndFade data-[state=open]:data-[side=bottom]:animate-slideUpAndFade data-[state=open]:data-[side=left]:animate-slideRightAndFade"
           sideOffset={2}
         >
-          <div className="flex flex-col gap-4 py-2">
+          <div onClick={closePopover} className="flex flex-col gap-4 py-2">
             <Link to={'/dashboard'} className="font-medium w-fit text-sm text-black inline-block px-2 py-1 border">
               Courses
             </Link>
             <Link to={'/dashboard/assignment'} className="font-medium w-fit text-sm text-black inline-block px-2 py-1 border">
-              Assignments
+              Exercises
             </Link>
           </div>
           {/* <Popover.Close

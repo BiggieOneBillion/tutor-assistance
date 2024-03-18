@@ -1,10 +1,11 @@
 import React from "react";
 import Header from "./Header";
 import {cssExercise as data} from '../../data/Exercise'
+import WebSections from "../WebSections";
 
 const Css3Exercise = () => {
   return (
-    <div className="h-full w-full overflow-y-scroll py-10 px-3 md:px-8 space-y-10">
+    <WebSections>
       {/* title */}
       <Header
         navTitle={"Css3 Exercise"}
@@ -33,7 +34,7 @@ const Css3Exercise = () => {
           </ul>
         </div>
       ))}
-    </div>
+    </WebSections>
   );
 };
 

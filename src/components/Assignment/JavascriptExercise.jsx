@@ -1,10 +1,11 @@
 import React from "react";
 import Header from "./Header";
 import { jsExercise as data } from "../../data/Exercise";
+import WebSections from "../WebSections";
 
 const JavascriptExercise = () => {
   return (
-    <div className="h-full w-full overflow-y-scroll py-10 px-3 md:px-8 space-y-10">
+    <WebSections>
       {/* title */}
       <Header
         navTitle={"Javascript Exercise"}
@@ -39,7 +40,7 @@ const JavascriptExercise = () => {
           </ul>
         </div>
       ))}
-    </div>
+    </WebSections>
   );
 };
 

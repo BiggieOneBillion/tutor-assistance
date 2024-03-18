@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const Assignment = () => {
   return (
-    <div className="h-full w-full py-10 px-8 space-y-10">
+    <div className="h-full w-full py-10 px-3 md:px-8 space-y-10">
       {/* title */}
       <div className="space-y-1">
-        <h1 className="font-semibold text-2xl">Assignments</h1>
-        <p className="text-sm font-normal capitalize text-gray-500">
-          Click on the various cards to see the assignments for various lessons.
+        <h1 className="font-semibold text-2xl">Exercise Section</h1>
+        <p className="text-xs md:text-sm font-normal capitalize text-gray-500">
+          Click on the various cards below to see the assignments for various lessons.
         </p>
       </div>
       {/* content */}

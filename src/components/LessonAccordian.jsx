@@ -34,7 +34,7 @@ import LessonDialog from "./LessonDialog";
 
 const LessonAccordian = ({ data }) => (
   <Accordion.Root
-    className="bg-transparent w-[300px] md:w-full space-y-5 lg:w-full rounded-md shadow-[0_2px_10px]y shadow-black/5y"
+    className="bg-transparent w-[300px]y md:w-full space-y-5 lg:w-full rounded-md shadow-[0_2px_10px]y shadow-black/5y"
     type="single"
     defaultValue="item-0"
     collapsible
@@ -42,13 +42,15 @@ const LessonAccordian = ({ data }) => (
     {data.map((datum, i) => (
       <div key={i + 234567} className="">
         <AccordionItem value={`item-${i}`}>
-          <AccordionTrigger>{datum.lessonName}</AccordionTrigger>
+          <AccordionTrigger>
+            <p className="text-left">{datum.lessonName}</p>
+          </AccordionTrigger>
           <AccordionContent>
             <div className="space-y-3">
               {/* VIDEO LINK */}
-              <div>
+              <div className="flex flex-col gap-2">
                 <p className="text-base capitalize font-medium">
-                  Please click on the link below to go to video
+                  Please click on the link below 
                 </p>
                 <LessonDialog data={datum.video_url} />
               </div>
@@ -60,7 +62,7 @@ const LessonAccordian = ({ data }) => (
                     {datum.assignment?.map((assign, i) => (
                       <li
                         key={i + 3456}
-                        className="font-normal text-xs uppercase"
+                        className="font-normal text-xs capitalize md:uppercase"
                       >
                         {assign}
                       </li>
@@ -76,7 +78,8 @@ const LessonAccordian = ({ data }) => (
                     <a
                       href={datum.Resources.mdnLink}
                       className="font-normal text-xs border border-black  cursor-pointer no-underline px-1"
-                      target="_blank" rel="noopener" 
+                      target="_blank"
+                      rel="noopener"
                     >
                       Link
                     </a>
@@ -86,7 +89,8 @@ const LessonAccordian = ({ data }) => (
                     <a
                       href={datum.Resources.w3school}
                       className="font-normal text-xs border border-black  cursor-pointer no-underline px-1"
-                      target="_blank" rel="noopener" 
+                      target="_blank"
+                      rel="noopener"
                     >
                       Link
                     </a>
@@ -96,7 +100,8 @@ const LessonAccordian = ({ data }) => (
                     <a
                       href={datum.Resources.jsInfo}
                       className="font-normal text-xs border border-black  cursor-pointer no-underline px-1"
-                      target="_blank" rel="noopener" 
+                      target="_blank"
+                      rel="noopener"
                     >
                       Link
                     </a>
@@ -131,7 +136,7 @@ const AccordionTrigger = React.forwardRef(
     <Accordion.Header className="flex">
       <Accordion.Trigger
         className={classNames(
-          "text-violet11 font-medium  text-lg text-[rgba(0,0,0,0.5)] bg-gray-200 shadow-mauve6 hover:bg-mauve2 group flex h-[45px] lg:h-[80px] flex-1 cursor-default items-center justify-between  px-5 text-[15px] leading-none shadow-[0_1px_0] outline-none",
+          "text-violet11 font-medium  text-base  text-[rgba(0,0,0,0.5)] bg-gray-200 shadow-mauve6 hover:bg-mauve2 group flex h-[45px] lg:h-[80px] flex-1 cursor-default items-center justify-between  px-5 text-[15px] leading-none shadow-[0_1px_0] outline-none",
           className
         )}
         {...props}

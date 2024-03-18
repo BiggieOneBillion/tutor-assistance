@@ -7,7 +7,7 @@ const Courses = () => {
       {/* title */}
       <div className="space-y-1">
         <h1 className="font-semibold text-2xl">List Of Enrolled Courses</h1>
-        <p className="text-sm font-normal capitalize text-gray-500">
+        <p className="text-xs md:text-sm font-normal capitalize text-gray-500">
           Click on the courses to see their content and course outline
         </p>
       </div>

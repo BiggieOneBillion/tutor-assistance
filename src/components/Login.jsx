@@ -101,7 +101,7 @@ const Login = () => {
     };
   };
   return (
-    <div className="h-screen w-screen bg-[#1F2226] text-[#1F2226] flex flex-col gap-4 justify-center px-2 items-center">
+    <div className="h-screen w-screen bg-[#1F2226] text-[#1F2226] flex flex-col gap-4 justify-center px-3 items-center">
       <h1 className="text-white text-2xl md:text-3xl font-medium uppercase">
         Student Companion
       </h1>

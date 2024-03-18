@@ -1,9 +1,10 @@
 import React from "react";
 import Header from "./Header";
+import WebSections from "../WebSections";
 
 const HtmlExercise = () => {
   return (
-    <div className="h-full w-full overflow-y-scroll py-10 px-3 md:px-8 space-y-10">
+    <WebSections>
       {/* title */}
       <Header
         navTitle={"Html Exercise"}
@@ -18,7 +19,7 @@ const HtmlExercise = () => {
           Build your cv using just Html, separating each section with a horizontal line.
         </p>
       </div>
-    </div>
+    </WebSections>
   );
 };
 
