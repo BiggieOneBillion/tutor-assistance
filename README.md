@@ -1,8 +1,10 @@
-# React + Vite
+# Information
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a student companion learning dashboard built with react and supabase for user authentication.
 
-Currently, two official plugins are available:
+The idea is so that student who I teach web development can access materials and videos for references and revision.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It contains links to youtube videos that explain each concept in details and also little exercises for practices.
+
+It has two sections: 1. Courses and 2. Exercises
+
