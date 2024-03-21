@@ -31,6 +31,7 @@ import * as Accordion from "@radix-ui/react-accordion";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import LessonDialog from "./LessonDialog";
+import Quiz from "./Quiz/Quiz";
 
 const LessonAccordian = ({ data }) => (
   <Accordion.Root
@@ -50,12 +51,12 @@ const LessonAccordian = ({ data }) => (
               {/* VIDEO LINK */}
               <div className="flex flex-col gap-2">
                 <p className="text-base capitalize font-medium">
-                  Please click on the link below 
+                  Please click on the link below
                 </p>
                 <LessonDialog data={datum.video_url} />
               </div>
               {/* QUESTION  */}
-              {datum.assignment !== undefined && (
+              {/* {datum.assignment !== undefined && (
                 <div className="space-y-2">
                   <h3 className="text-base font-medium">Questions</h3>
                   <ul className="space-y-1">
@@ -69,6 +70,10 @@ const LessonAccordian = ({ data }) => (
                     ))}
                   </ul>
                 </div>
+              )} */}
+
+              {datum.assignment !== undefined && (
+                <Quiz sampleData={datum.assignment} />
               )}
               <div className="space-y-2">
                 <h3 className="text-base font-medium">Useful Links</h3>

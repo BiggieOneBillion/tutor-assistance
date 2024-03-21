@@ -23,7 +23,7 @@ const LessonDialog = ({ data }) => (
         </Dialog.Title>
 
         <iframe
-          className="w-[300px] h-[200px] lg:w-[620px] xl:w-[1000px] 2xl:w-[1280px] lg:h-[700px]"
+          className="w-[300px] h-[200px] md:w-[620px] xl:w-[1000px] 2xl:w-[1280px] md:h-[700px]"
           src={data}
           title="YouTube video player"
           frameborder="0"
