@@ -76,7 +76,8 @@ const Login = () => {
         return;
       }
 
-      setPasswordError("Password Incorrect");
+      error && setPasswordError("Password Incorrect");
+      setPasswordError('Network Error')
       setDisablePasswordSubmitBtn(false);
 
       // update the isAuthenticated state using the setIsAuthenticated from the global context
