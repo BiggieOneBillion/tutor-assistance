@@ -4,6 +4,7 @@ import * as Accordion from "@radix-ui/react-accordion";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import LessonDialog from "./LessonDialog";
+import { v4 } from "uuid";
 
 const LessonAccordian = ({ data }) => (
   <Accordion.Root
@@ -13,7 +14,7 @@ const LessonAccordian = ({ data }) => (
     collapsible
   >
     {data.map((datum, i) => (
-      <div key={i + 234567} className="">
+      <div key={v4()}>
         <AccordionItem value={`item-${i}`}>
           <AccordionTrigger>{datum.lessonName}</AccordionTrigger>
           <AccordionContent>
@@ -31,7 +32,7 @@ const LessonAccordian = ({ data }) => (
                 <ul className="space-y-1">
                   {datum.assignment?.map((assign, i) => (
                     <li
-                      key={i + 3456}
+                      key={v4()}
                       className="font-normal text-xs uppercase"
                     >
                       {assign}

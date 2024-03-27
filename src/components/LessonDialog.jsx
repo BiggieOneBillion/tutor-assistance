@@ -26,9 +26,9 @@ const LessonDialog = ({ data }) => (
           className="w-[300px] h-[200px] md:w-[620px] xl:w-[1000px] 2xl:w-[1280px] md:h-[700px]"
           src={data}
           title="YouTube video player"
-          frameborder="0"
+          // frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
         <Dialog.Close asChild>
           <button

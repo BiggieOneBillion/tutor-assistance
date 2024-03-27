@@ -101,80 +101,47 @@ const Login = () => {
     };
   };
   return (
-    <div className="h-screen w-screen bg-[#1F2226] text-[#1F2226] flex flex-col gap-4 justify-center px-3 items-center">
-      <h1 className="text-white text-2xl md:text-3xl font-medium uppercase">
-        Student Companion
-      </h1>
-      <div className="bg-[#F0F0F2] py-4 px-3 lg:py-8 lg:px-10 space-y-2 rounded-lg w-full md:w-[500px] lg:w-fit">
-        {passwordError && (
-          <p className="py-2 px-2 text-sm font-medium text-red-800 bg-red-400 rounded-md">
-            {passwordError}
-          </p>
-        )}
-        {/* Email Input */}
-        <div className="space-y-4">
-          <div className="input-container flex flex-col items-start gap-1">
-            <label htmlFor="email" className="font-medium text-gray-600">
-              Email:
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="px-3 py-2 text-base rounded-md border w-full lg:w-[400px] outline-none placeholder:text-gray-300 placeholder:text-sm"
-              placeholder="Enter your email"
-              {...register("email")}
-            />
-            {errors.email && (
-              <span className="text-sm text-red-600 inline-block px-2 py-1 font-semibold">
-                {errors.email.message}
-              </span>
-            )}
-          </div>
-          <div className="flex justify-start items-center">
-            <button
-              className={`${
-                userEmailExit && "hidden"
-              } font-medium text-base bg-[#1F2226] disabled:bg-[#1f22264b] text-[#F0F0F2] py-2 px-6 rounded-lg`}
-              onClick={handleSubmit(handleEmailCheck)}
-              disabled={disableEmailSubmitBtn}
-            >
-              Submit
-            </button>
-            {disableEmailSubmitBtn && (
-              <span className="loader">
-                <svg viewBox="25 25 50 50">
-                  <circle r="10" cy="50" cx="50"></circle>
-                </svg>
-              </span>
-            )}
-          </div>
-        </div>
-        {/* Password Input */}
-        {userEmailExit && (
+    <div className="h-[100dvh] w-screeny bg-[#1F2226] text-[#1F2226] flex flex-col gap-4 justify-center px-3 items-center">
+      <main className="space-y-4 text-center">
+        <h1 className="text-white text-2xl md:text-3xl font-medium uppercase">
+          Student Companion
+        </h1>
+        <div className="bg-[#F0F0F2] py-4 px-3 lg:py-8 lg:px-10 space-y-2 rounded-lg w-full md:w-[500px] lg:w-fit">
+          {passwordError && (
+            <p className="py-2 px-2 text-sm font-medium text-red-800 bg-red-400 rounded-md">
+              {passwordError}
+            </p>
+          )}
+          {/* Email Input */}
           <div className="space-y-4">
-            <div className="input-container flex flex-col items-start gap-1 w-full">
-              <label htmlFor="password" className="font-medium text-gray-600">
-                Password:
+            <div className="input-container flex flex-col items-start gap-1">
+              <label htmlFor="email" className="font-medium text-gray-600">
+                Email:
               </label>
               <input
-                type="password"
-                name="password"
-                id="password"
+                type="email"
+                id="email"
                 className="px-3 py-2 text-base rounded-md border w-full lg:w-[400px] outline-none placeholder:text-gray-300 placeholder:text-sm"
-                placeholder="Enter your password"
-                ref={passwordRef}
-                onKeyDown={() => setPasswordError("")}
+                placeholder="Enter your email"
+                {...register("email")}
               />
+              {errors.email && (
+                <span className="text-sm text-red-600 inline-block px-2 py-1 font-semibold">
+                  {errors.email.message}
+                </span>
+              )}
             </div>
             <div className="flex justify-start items-center">
               <button
-                className={`font-medium text-base bg-[#1F2226] disabled:bg-[#1f22264b] text-[#F0F0F2] py-2 px-6 rounded-lg`}
-                onClick={(e) => handlePasswordCheck(e)}
-                disabled={disablePasswordSubmitBtn}
+                className={`${
+                  userEmailExit && "hidden"
+                } font-medium text-base bg-[#1F2226] disabled:bg-[#1f22264b] text-[#F0F0F2] py-2 px-6 rounded-lg`}
+                onClick={handleSubmit(handleEmailCheck)}
+                disabled={disableEmailSubmitBtn}
               >
                 Submit
               </button>
-              {disablePasswordSubmitBtn && (
+              {disableEmailSubmitBtn && (
                 <span className="loader">
                   <svg viewBox="25 25 50 50">
                     <circle r="10" cy="50" cx="50"></circle>
@@ -183,8 +150,43 @@ const Login = () => {
               )}
             </div>
           </div>
-        )}
-      </div>
+          {/* Password Input */}
+          {userEmailExit && (
+            <div className="space-y-4">
+              <div className="input-container flex flex-col items-start gap-1 w-full">
+                <label htmlFor="password" className="font-medium text-gray-600">
+                  Password:
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  className="px-3 py-2 text-base rounded-md border w-full lg:w-[400px] outline-none placeholder:text-gray-300 placeholder:text-sm"
+                  placeholder="Enter your password"
+                  ref={passwordRef}
+                  onKeyDown={() => setPasswordError("")}
+                />
+              </div>
+              <div className="flex justify-start items-center">
+                <button
+                  className={`font-medium text-base bg-[#1F2226] disabled:bg-[#1f22264b] text-[#F0F0F2] py-2 px-6 rounded-lg`}
+                  onClick={(e) => handlePasswordCheck(e)}
+                  disabled={disablePasswordSubmitBtn}
+                >
+                  Submit
+                </button>
+                {disablePasswordSubmitBtn && (
+                  <span className="loader">
+                    <svg viewBox="25 25 50 50">
+                      <circle r="10" cy="50" cx="50"></circle>
+                    </svg>
+                  </span>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      </main>
     </div>
   );
 };
