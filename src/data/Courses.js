@@ -710,9 +710,45 @@ export const domCourse = [
 ];
 
 export const cssCourse = [
+{
+  lessonName: "CSS Selectors",
+  video_url: "https://www.youtube.com/embed/QgxkYbGr2II?si=CUFzy3952wUoMdFL",
+  assignment: [
+    {
+      questions: "Which CSS selector is used to select elements with a specific class?",
+      answer: "A",
+      options: [".class-selector", "#id-selector", "element-selector", "*"]
+    },
+    {
+      questions: "What does the CSS selector 'div p' select?",
+      answer: "B",
+      options: ["All <p> elements inside <div> elements", "All <p> elements that are children of <div> elements", "All <div> elements inside <p> elements", "All <p> elements inside or outside of <div> elements"]
+    },
+    {
+      questions: "Which CSS selector is used to select an element by its ID?",
+      answer: "C",
+      options: ["* (asterisk)", ".class-selector", "#id-selector", "element-selector"]
+    },
+    {
+      questions: "What is the specificity of an ID selector?",
+      answer: "D",
+      options: ["1", "10", "100", "1000"]
+    },
+    {
+      questions: "What does the CSS selector 'div > p' select?",
+      answer: "A",
+      options: ["All <p> elements that are direct children of <div> elements", "All <p> elements inside <div> elements", "All <div> elements that are direct children of <p> elements", "All <p> elements inside or outside of <div> elements"]
+    }
+  ],
+  Resources: {
+    mdnLink: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors",
+    w3school: "https://www.w3schools.com/cssref/css_selectors.asp",
+    jsInfo: "https://css-tricks.com/how-css-selectors-work/"
+  }
+},
   {
     lessonName: "Colors and Backgrounds",
-    video_url: "https://www.youtube.com/embed/VIDEO_ID_HERE",
+    video_url: "https://www.youtube.com/embed/Ddc-IIrIot0?si=lCXAcbah5SBYbBdx",
     assignment: [
       {
         questions: "What property is used to change the color of text in CSS?",
@@ -765,7 +801,7 @@ export const cssCourse = [
   },
   {
     lessonName: "Typography",
-    video_url: "https://www.youtube.com/embed/VIDEO_ID_HERE",
+    video_url: "https://www.youtube.com/embed/klXyJWlIzuY?si=0uXWtlAs7gamIGaX",
     assignment: [
       {
         questions: "Which property is used to set the font size in CSS?",
@@ -823,7 +859,7 @@ export const cssCourse = [
   },
   {
     lessonName: "Layouts",
-    video_url: "https://www.youtube.com/embed/VIDEO_ID_HERE",
+    video_url: "https://www.youtube.com/embed/EaWj2AWI5Es?si=jqYygjyLwc9AAdqr",
     assignment: [
       {
         questions:
@@ -872,7 +908,7 @@ export const cssCourse = [
   },
   {
     lessonName: "Flexbox",
-    video_url: "https://www.youtube.com/embed/VIDEO_ID_HERE",
+    video_url: "https://www.youtube.com/embed/B8BFVzbKmPI?si=qJil3fDgXCR4DHZF",
     assignment: [
       {
         questions: "What is the main axis and cross axis in flexbox?",
@@ -927,7 +963,7 @@ export const cssCourse = [
   },
   {
     lessonName: "Grid Layout",
-    video_url: "https://www.youtube.com/embed/VIDEO_ID_HERE",
+    video_url: "https://www.youtube.com/embed/EaWj2AWI5Es?si=c7trPn5fTbfxCiVA",
     assignment: [
       {
         questions: "What are the two primary components of CSS Grid Layout?",
@@ -987,7 +1023,7 @@ export const cssCourse = [
   },
   {
     lessonName: "Responsive Design",
-    video_url: "https://www.youtube.com/embed/VIDEO_ID_HERE",
+    video_url: "https://www.youtube.com/embed/69IbzTWg5PM?si=HwDiXQi5tCjc0ZN6",
     assignment: [
       {
         questions: "What is the purpose of media queries in CSS?",
@@ -1043,7 +1079,7 @@ export const cssCourse = [
   },
   {
     lessonName: "Transitions",
-    video_url: "https://www.youtube.com/embed/VIDEO_ID_HERE",
+    video_url: "https://www.youtube.com/embed/Nloq6uzF8RQ?si=gUI6hubmdGjgZhMt",
     assignment: [
       {
         questions:
@@ -1104,7 +1140,7 @@ export const cssCourse = [
   },
   {
     lessonName: "Animations",
-    video_url: "https://www.youtube.com/embed/VIDEO_ID_HERE",
+    video_url: "https://www.youtube.com/embed/YszONjKpgg4?si=-4MFpZ_90gEpExkT",
     assignment: [
       {
         questions: "Which CSS property is used to define keyframes for animations?",
@@ -1165,7 +1201,7 @@ export const cssCourse = [
   },
   {
     lessonName: "Transforms",
-    video_url: "https://www.youtube.com/embed/VIDEO_ID_HERE",
+    video_url: "https://www.youtube.com/embed/rzD-cPhq02E?si=bCsrWpRl_9XI6IR_E",
     assignment: [
       {
         questions: "Which CSS property is used to apply 2D or 3D transformations to an element?",
@@ -1226,7 +1262,7 @@ export const cssCourse = [
   },
   {
     lessonName: "Box Model",
-    video_url: "https://www.youtube.com/embed/VIDEO_ID_HERE",
+    video_url: "https://www.youtube.com/embed/L9khsrjMwKw?si=6m9oeAvkdEevq11Q",
     assignment: [
       {
         questions: "What components make up the CSS box model?",

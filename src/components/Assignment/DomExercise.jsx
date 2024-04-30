@@ -11,6 +11,7 @@ const DomExercise = () => {
         navUrl={"dom"}
         title={"DOM Exercise"}
       />
+       <h1 className="font-medium text-lg text-black">COMING SOON!!</h1>
       {/* <LessonAccordian data={data} /> */}
     </WebSections>
   );
